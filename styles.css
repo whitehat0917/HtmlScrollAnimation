@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.spacer {
+  height: 100vh;
+  background-color: gray;
+}
+
+.frame2 {
+  /*min-height: 100vh;*/
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame2 hr {
+  width: 60%;
+  margin: 2% 0;
+}
+
+.badges {
+  display: flex;
+  width: 80%;
+  overflow: visible;
+  flex-wrap: wrap;
+}
+
+div[class^="item"] {
+  height: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+div[class^="item"] > img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+div[class^="item"] > p {
+  text-align: center;
+}
+
+#products {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div[class^="product"] {
+  height: 100%;
+  flex: 1;
+  margin: 1% 2%;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div[class^="product"] > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div[class^="product"] > a > img {
+  width: 90%;
+}
+
+div[class^="product"] > .link {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+div[class^="product"] > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 15px;
+}
+
+div[class^="product"] > span > img {
+  height: 100%;
+}
+
+.red {
+  color: red;
+}
+
+.linethrough {
+  text-decoration: line-through;
+  color: gray;
+}
+
+@media only screen and (max-width: 690px) {
+  div[class^="item"] > img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  #products {
+    padding-top: 0;
+  }
+  div[class^="product"] {
+    height: 80%;
+  }
+  div[class^="product"] > a > img {
+    width: 60%;
+  }
+
+  .break {
+    flex-basis: 100%;
+  }
+}
+
+#sports{
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+div[class^="sport"] {
+  position: relative;
+  width: 40%;
+  background-size: cover;
+  border: 3px solid #f2f2f2;
+  overflow: hidden;
+}
+
+div[class^="sport"]:after {
+  content: "";
+  float: left;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+#sports p{
+  font-size: 32px;
+}
+
+div[class^="sport"] > div {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 8%;
+  z-index: 3;
+}
+
+.sport2 > div{
+  right: 0;
+}
+
+div[class^="sport"] > div a {
+  color: white;
+  background-color: #ff9900;
+  width: fit-content;
+  padding: 10px 25px;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+#sports span[class^="image-wrapper"] {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  z-index: 2;
+}
+
+.image-wrapper1{
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image-wrapper1 img{
+  width: 50%;
+}
+
+.image-wrapper2 img{
+  height: 100%;
+}
+
+#sports span[class^="pattern-wrapper"] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#sports span[class^="pattern-wrapper"] img {
+  width: 100%;
+}
+
+.pattern-wrapper2 img{
+  transform: rotate(180deg);
+}
